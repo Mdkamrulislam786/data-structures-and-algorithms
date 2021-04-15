@@ -16,7 +16,7 @@
     Graph 
     Matrix
     Misc
-    Algorithm
+5. Algorithm
 
 Important Links:
 DSA Roadmap: https://hackernoon.com/learning-roadmap-for-data-structures-and-algorithms-cu2032qh
