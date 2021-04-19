@@ -24,3 +24,16 @@ DSA Roadmap: https://hackernoon.com/learning-roadmap-for-data-structures-and-alg
 Learning Resources:
 https://www.geeksforgeeks.org/data-structures/
 Topcoder, Hackerrank, Codechef, Codeforces, LeetCode
+
+## Must know Data structures and alogorithms
+
+1. Linked List - singley,doubly,circuler
+2. Binary Tree
+3. Stack And Queue
+4. Merge Sort
+5. Dictionary/Map
+6. Graph - directed undirected
+7. Binary Search
+8. Breadth/Depth First Search Memoization
+9. Recursion 
+10. Big O Notation
