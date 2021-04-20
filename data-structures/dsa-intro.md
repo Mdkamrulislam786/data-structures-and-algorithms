@@ -8,3 +8,7 @@ Sequence of steps to solve a given problem.
 
 Visit this Note*: https://codewithharry.com/static/common/uploads/ds0.pdf
 
+### What is good code?
+1. Readability
+2. Scalability (time and space complexity/ memeory and speed)
+

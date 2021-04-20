@@ -1,5 +1,7 @@
 #### Basics: pointers, structures, classes, dynamic memory allocation, and recursion
 
+You must have a deep understanding of one programming language. <br>
+
 <b>pointers</b>
 Pointers is a special variable that is capable of storing some address. It points to a memory location where the first byte is stored.
 Ex:
