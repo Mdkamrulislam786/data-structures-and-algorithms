@@ -4,4 +4,4 @@ Time Complexity is the study of efficiency of algorithms. How much time is being
 
 Visit the Notes to understand it better with examples: https://codewithharry.com/static/common/uploads/ds1.pdf
 
-###Howtocalculatetimecomplexityofaprogram/function/algorithm
+### Howtocalculatetimecomplexityofaprogram/function/algorithm

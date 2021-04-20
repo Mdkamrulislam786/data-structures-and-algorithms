@@ -26,3 +26,12 @@ Email extractor
 4. weworkremotly - to find remote jobs
 5. do goolge search to find recruiters ex: 'site:linkedin.com facebook recruiter'
 
+
+# What companies looking for
+1. Analytical Skill
+2. Coding Skill
+3. Technical Skill
+4. Communication Skill
+
+
+
