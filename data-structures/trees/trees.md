@@ -30,4 +30,10 @@ Basics:
 3) Both the left and right subtrees of X must also be BSTs.
 
 
-Balanace search tree gives you O(log N) but unbalanced search tree gives O(n). So you want balanced search tree not unbalanced one.
+Balanace search tree gives you O(log N) but unbalanced search tree gives O(n). So you want balanced search tree not unbalanced one. To balance a BST you will use AVL Tree or Red/Black tree. You will find many packages that will do automatically this for you.  
+
+## Binary Heap
+Priority queue. highest at the top then keeps adding from the left to right each node has 2 child, each node is bigger than child
+
+## Trie
+Used for dictionary google search autifill sugestions
