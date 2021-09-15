@@ -57,6 +57,24 @@ Lexical scope = local memory + ref to lexical parent memory
 
 is applied to let and const only, the time between let and const declaration and initialization lies the TDZ. you cant acccess let and const in the TDZ.you'll get a reference error
 
+#### Scope
+
+In JavaScript, objects and functions are also variables. Scope determines the accessibility (visibility) of variables, objects, and functions from different parts of the code.
+
+JavaScript has 3 types of scope:
+
+1. Block scope - let const, Variables declared inside a { } block can be accessed from outside the block.
+2. Function scope - var,let,const JavaScript has function scope
+3. Global scope - var,let const A variable declared outside a function, becomes GLOBAL.
+
+Variables declared with the var keyword can NOT have block scope.
+
+Variables declared within a JavaScript function, become LOCAL to the function.
+Local variables have Function Scope. They can only be accessed from within the function.
+
+Lexical scoping:
+A lexical scope in JavaScript means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true;
+
 ### BLOCK SCOPE & Shadowing
 
 {} defines a block also known as compound statement. we use it to group multiple js statements in a group where js expects only one statment. like in a if condition js expects only one statement we can have a block to use mutiple statement
@@ -82,3 +100,22 @@ function outest(){
 var close = outest() ('hello world') //argument b of outer func
 close()
 ```
+
+### Callback Functions
+
+A callback is a function passed into another function as an argument to be executed later / which is then invoked inside the outer function to complete some kind of routine or action.
+
+```
+function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+```
+
+### Asynchronous JavaScript & EVENT LOOP
