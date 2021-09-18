@@ -119,3 +119,16 @@ processUserInput(greeting);
 ```
 
 ### Asynchronous JavaScript & EVENT LOOP
+
+Web api env the callback func are stored initially, then at agiven time these CB func are passed to callback queue or microtask queue(API call CB are passed in here), the event loop always cjhecks if the callstack is empty if its empty it first put the microtast CB's in the callstack to be executed quickly, then the callback queues CB's are passed into the callstack
+
+### JS Engine
+
+Every browser has JS Runtime environment. Inside JS Runtime environment we have JS engine, Web api's(setTimeout, DOM api, fetch(), localstorage etc all these are combines into an object called window etc), event loop, callback queue, microtask queue,
+
+JS Engine is not a machine, its made with C++.JS Engine executes a code in the machine in 4 phases,
+
+1. Code
+2. Parsing - breaks the code into AST Abstract syntax tree (astexplorer.net to checkout the AST of a js code)
+3. Compilation - Just In Time compilation, has interpreter which runs the code fat, the compiler that optimized the code, in modern js engine both interpreter and compiler works together, interpreter runs the code line by line fast at the same time compiler optimzes the interpreted code to be excuted as optimized machine code
+4. Execution - has memory heap and callstack, memory heap work along with Garbage collector and callstack together, the GC allocates, reallocates, free up the memory, it uses mark & sweap alogorithm to do that
