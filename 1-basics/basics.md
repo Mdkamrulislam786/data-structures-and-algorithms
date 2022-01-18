@@ -90,3 +90,7 @@ int fact(int n)
     }
 }
 </code>
+
+<b>Memory and storage</b>
+Memory(ram) is temporary and storage is permanent.When a app(chrome) is open it uses memory cz its faster to read and write there. when you download or hit save its stored on the storage. when you declare a variable int a = 1; its stored as 32bit/64bits 0000...1. 
+Memory = a long tape of bytes. 1 bite = 8 bit.
