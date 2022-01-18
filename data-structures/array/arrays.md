@@ -4,6 +4,7 @@ MDN: The JavaScript Array class is a global object that is used in the construct
 An array is a series of memory locations – or 'boxes' – each of which holds a single item of data, but with each box sharing the same name.
 Array is a collection of data.
 Array is a typeof object in javascript
+Arrays.protype[x] x=methods may not be 0(1) you have to understand how they work behind the scene to find the big 0. C and JS allocates memory for Array the same way. Ex: add new item to an array it will copy prev array and move it to a new memory location with the new added item
 
 ### Static vs dynamic array
 

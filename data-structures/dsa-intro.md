@@ -1,9 +1,10 @@
 ### Intro Data structures and alogorithms
-
-<b> Data Structures </b> <br>
+Data Stuctures + Algoriths = Programs  
+<b> Data Structures </b>  
 Data structures are a way to arrange data in main memory(RAM) for efficient usage.
 Ex: Arrays, Linked List, Stacks , Heaps, Graphs etc.
-<b> Algorithms </b> <br>
+Learn How to build and use them?
+<b> Algorithms </b>  
 Sequence of steps to solve a given problem.
 
 Visit this Note\*: https://codewithharry.com/static/common/uploads/ds0.pdf
