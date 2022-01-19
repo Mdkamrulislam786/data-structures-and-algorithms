@@ -1,16 +1,3 @@
-//Log all pairs of array
-
-const boxes = ["a", "b", "c", "d", "e"];
-function move(arr, val) {
-  var j = 0;
-  for (var i = 0, l = arr.length; i < l; i++) {
-    if (arr[i] !== val) {
-      arr[j++] = arr[i];
-    }
-  }
-  arr.length = j;
-}
-
 // BUILD AN ARRAY
 
 class MyArray {
