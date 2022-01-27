@@ -41,4 +41,5 @@ newArray.push("you");
 newArray.push("?");
 
 newArray.deleteAtIndex(0);
+
 console.log(newArray);

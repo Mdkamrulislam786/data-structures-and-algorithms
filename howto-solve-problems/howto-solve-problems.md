@@ -4,7 +4,7 @@ If your code has these 2things then your code is good code..
 
 1. Readability
 2. Time complexity
-3. Space Complexity
+3. Space complexity
 
 # What companies looking for/ What you need to have
 

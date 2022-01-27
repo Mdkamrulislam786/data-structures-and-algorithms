@@ -1,4 +1,5 @@
 ### Intro Data structures and alogorithms
+
 Data Stuctures + Algoriths = Programs  
 <b> Data Structures </b>  
 Data structures are a way to arrange data in main memory(RAM) for efficient usage.

@@ -26,7 +26,7 @@ function reverseString(str) {
 
 reverseString("hello");
 
-//1. Witihout comments ES6/5
+//1. Witihout comments ES5
 function reverseString(str) {
   var newString = "";
   for (var i = str.length - 1; i >= 0; i--) {
@@ -34,6 +34,7 @@ function reverseString(str) {
   }
   return newString;
 }
+
 reverseString("hello");
 
 //ES6

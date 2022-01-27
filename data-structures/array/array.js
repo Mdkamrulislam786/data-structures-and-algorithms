@@ -20,7 +20,7 @@ sortedArrys([0, 3, 4, 31], [4, 6, 30]);
 //MERGE SORTED ARRAYS
 // Solution1:
 // O(n) time & O(n) space
-function mergeTwo(arr1, arr2) {
+function mergeTwo(arr1, arr2) { 
   let merged = [];
   let index1 = 0;
   let index2 = 0;
