@@ -1,13 +1,13 @@
-let nums = [2, 11, 7, 15],
-  target = 9;
-
-var twoSum = function (nums, target) {
+// var nums = [0, 1, 0, 3, 12];
+var nums = [0, 0, 1];
+var moveZeroes = function (nums) {
   for (let i = 0; i < nums.length; i++) {
-    for (let j = 1; j < nums.length; i++) {
-      if (nums[i] + nums[j] === target) return [i, j];
+    console.log(nums);
+    if (nums[i] === 0) {
+      nums.splice(i, 1);
+      nums.push(0);
+      i--;
     }
   }
 };
-
-let indices = twoSum(nums, target);
-console.log(indices);
+moveZeroes(nums);
