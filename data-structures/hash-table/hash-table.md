@@ -1,3 +1,6 @@
 # Hash Table
+
 In Javascript hastable is object. basket.grapes = 100; in array we find a value by index ike index7 has a value of 100num. but in sa hash we find the value by key(grapes) that has the value 100; a hash function decides where to put/store the value and key;
 grapes gets passed to a hash function and the function coverst it to a random hash like '565jvb3r4v223recer3u' and this random hash gets convert as a memrylocation/address where it stores the value 100;
+
+Key value > hash it > put it in a memory. Javascript saves the key and value together in a memeory space by hashing the key and value. In a object sometimes a diff hashed value may get put in the same memory location, its called collision. the same memory location may have more than one hashed value by using linked list data structure and if it does then the time complexity maybe 0(n/k) where k is the number of keys in a obj. In a object the mememory allocation is not contiguous and the keys can only be strings. But in a Map() in JS the keys can be any type you can have keys as number or strings and the memeory allocation is contiguous means one hashed value will be places after the one. In a Set() you can only store keys.
