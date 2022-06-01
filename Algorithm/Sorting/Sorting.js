@@ -1,12 +1,12 @@
 //BUBLE SORT
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const numbers1 = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function bubbleSort(array) {
   const length = array.length;
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length; j++) {
       if (array[j] > array[j + 1]) {
-        //Swap the numbers
+        //Swap the numbers1
         let temp = array[j];
         array[j] = array[j + 1];
         array[j + 1] = temp;
@@ -15,11 +15,10 @@ function bubbleSort(array) {
   }
 }
 
-bubbleSort(numbers);
-console.log(numbers);
+bubbleSort(numbers1);
 
 // SELECTION SORT
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const numbers2 = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function selectionSort(array) {
   const length = array.length;
@@ -39,11 +38,10 @@ function selectionSort(array) {
   return array;
 }
 
-selectionSort(numbers);
-console.log(numbers);
+selectionSort(numbers2);
 
 //INSERTION SORT
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const numbers3 = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function insertionSort(array) {
   const length = array.length;
@@ -66,11 +64,10 @@ function insertionSort(array) {
   }
 }
 
-insertionSort(numbers);
-console.log(numbers);
+insertionSort(numbers3);
 
 //MERGE SORT
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const numbers4 = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function mergeSort(array) {
   if (array.length === 1) {
@@ -104,8 +101,7 @@ function merge(left, right) {
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
-const answer = mergeSort(numbers);
-console.log(answer);
+const answer = mergeSort(numbers4);
 
 //QUICK SORT
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
@@ -148,7 +144,3 @@ function swap(array, firstIndex, secondIndex) {
 
 //Select first and last index as 2nd and 3rd parameters
 quickSort(numbers, 0, numbers.length - 1);
-console.log(numbers);
-
-
-
