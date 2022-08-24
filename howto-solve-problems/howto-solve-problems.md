@@ -1,4 +1,4 @@
-### What is goiod code?
+### What is good code?
 
 If your code has these 2things then your code is good code..
 
