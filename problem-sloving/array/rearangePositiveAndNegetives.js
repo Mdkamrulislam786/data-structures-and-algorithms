@@ -16,7 +16,7 @@ function rearrange(arr, n) {
     if (positiveNum >= 0) rearrangedArray.push(positiveNum);
     if (negativeNum) rearrangedArray.push(negativeNum);
   }
-  arr = rearrangedArray;
+
   return rearrangedArray;
 }
 
