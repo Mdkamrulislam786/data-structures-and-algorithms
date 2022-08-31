@@ -1,25 +1,17 @@
-function rearrange(arr, n) {
-  const rearrangedArray = [];
-  const positiveNumbers = [];
-  const negativeNumbers = [];
+function maxSubarraySum(arr, N) {
+  let max = arr[0];
+  let currSum = 0;
 
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < N; i++) {
     const element = arr[i];
-    if (element >= 0) positiveNumbers.push(element);
-    else negativeNumbers.push(element);
+    currSum += element;
+    if (currSum > max) max = currSum;
+    if (currSum < 0) currSum = 0;
   }
 
-  for (let j = 0; j < n; j++) {
-    const positiveNum = positiveNumbers[j];
-    const negativeNum = negativeNumbers[j];
-
-    if (positiveNum >= 0) rearrangedArray.push(positiveNum);
-    if (negativeNum) rearrangedArray.push(negativeNum);
-  }
-  arr = rearrangedArray;
-  return rearrangedArray;
+  return max;
 }
 
-const arr = [9, 4, -2, -1, 5, 0, -5, -3, 2];
-const n = arr.length;
-console.log(rearrange(arr, n));
+const arr = [1, 2, 3, -2, 5];
+const N = arr.length;
+console.log(maxSubarraySum(arr, N));
