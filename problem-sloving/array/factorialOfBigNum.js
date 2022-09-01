@@ -13,9 +13,9 @@ function factorial(n) {
   // Apply simple factorial formula n! = 1 * 2 * 3 * 4...*n
   for (let x = 2; x <= n; x++) res_size = multiply(x, res, res_size);
 
-  console.log("Factorial of given number is ", res.reverse());
-  // for (let i = res_size - 1; i >= 0; i--) factorialNum += res[i];
-  // console.log("factorialNum", factorialNum);
+  console.log("Factorial of given number is ");
+  for (let i = res_size - 1; i >= 0; i--) factorialNum += res[i];
+  console.log("factorialNum", factorialNum);
 }
 
 // This function multiplies x with the number
@@ -31,8 +31,10 @@ function multiply(x, res, res_size) {
   // One by one multiply n with individual digits of res[]
   for (let i = 0; i < res_size; i++) {
     let prod = res[i] * x + carry;
+
     // Store last digit of 'prod' in res[]
     res[i] = prod % 10;
+
     // Put rest in carry
     carry = Math.floor(prod / 10);
   }
