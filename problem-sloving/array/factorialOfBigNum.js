@@ -50,3 +50,70 @@ function multiply(x, res, res_size) {
 
 // Driver program
 factorial(100);
+
+/* flow
+this multiplication was implemented by this code
+
+120
+ *6
+ ___
+ 720
+1st loop 
+2,1,1
+prod=1*2+0
+res[0]=2
+carry=0
+
+2nd loop 
+3,2,1
+prod=2*3+0
+res[0]=6
+carry=0
+
+3rd loop 
+4,6,1
+prod=6*4+0
+res[0]=4
+carry=2
+
+while carry=2
+res[1]=2
+carry=0
+res_size=2
+
+
+4th loop 
+5,[4,2],2
+prod=4*5+0
+res[0]=0
+carry=2
+
+prod=2*5+2
+res[1]=2
+carry=1
+
+while carry=1
+res[2]=1
+carry=0
+res_size=3
+
+5th loop 
+6,[0,2,1],3
+prod=0*6+0
+res[0]=0
+carry=0
+
+prod=2*6+0
+res[1]=2
+carry=1
+
+prod=1*6+1
+res[1]=7
+carry=0
+
+while carry=1
+res[3]=1
+carry=0
+res_size=3
+
+*/
