@@ -39,7 +39,7 @@ function findLongestConseqSubseq(arr, n) {
 
 // Driver code
 
-let arr = [2, 6, 1, 9, 4, 5, 3];
+let arr = [1, 2, 2, 3];
 let n = arr.length;
 console.log(
   "Length of the Longest contiguous subsequence is " +

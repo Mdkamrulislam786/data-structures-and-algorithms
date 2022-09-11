@@ -58,6 +58,8 @@ this multiplication was implemented by this code
  *6
  ___
  720
+
+ 
 1st loop 
 2,1,1
 prod=1*2+0
