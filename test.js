@@ -1,47 +1,43 @@
-// JavaScript program to find longest
-// contiguous subsequence
+// Program to find minimum number of platforms
+// required on a railway station
 
-// Returns length of the longest
-// contiguous subsequence
-
-function findLongestConseqSubseq(arr, n) {
-  let ans = 0,
-    count = 0;
-
-  // sort the array
-  arr.sort(function (a, b) {
-    return a - b;
-  });
-
-  var v = [];
-  v.push(arr[0]);
-
-  //insert repeated elements only once in the vector
-  for (let i = 1; i < n; i++) {
-    if (arr[i] != arr[i - 1]) v.push(arr[i]);
+function max(a, b) {
+  if (a == b) return a;
+  else {
+    if (a > b) return a;
+    else return b;
   }
-
-  // find the maximum length
-  // by traversing the array
-  for (let i = 0; i < v.length; i++) {
-    // Check if the current element is equal
-    // to previous element +1
-    if (i > 0 && v[i] == v[i - 1] + 1) count++;
-    // reset the count
-    else count = 1;
-
-    // update the maximum
-    ans = Math.max(ans, count);
-  }
-
-  return ans;
 }
 
-// Driver code
+// Returns minimum number of platforms required
+function findPlatform(arr, dep, n) {
+  // plat_needed indicates number of platforms
+  // needed at a time
+  var plat_needed = 1,
+    result = 1;
+  var i = 1,
+    j = 0;
 
-let arr = [2, 6, 1, 9, 4, 5, 3];
-let n = arr.length;
+  // run a nested loop to find overlap
+  for (var i = 0; i < n; i++) {
+    // minimum platform
+    plat_needed = 1;
+
+    for (var j = 0; j < n; j++) {
+      // check for overlap
+      if (i != j) if (arr[i] >= arr[j] && dep[j] >= arr[i]) plat_needed++;
+    }
+
+    // update result
+    result = max(result, plat_needed);
+  }
+
+  return result;
+}
+
+var arr = [100, 300, 500];
+var dep = [900, 400, 600];
+var n = 3;
 console.log(
-  "Length of the Longest contiguous subsequence is " +
-    findLongestConseqSubseq(arr, n)
+  "Minimum Number of Platforms Required = " + findPlatform(arr, dep, n)
 );
