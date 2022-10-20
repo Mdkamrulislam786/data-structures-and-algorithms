@@ -23,3 +23,5 @@ function minJump(arr, n) {
 const arr = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9];
 const n = arr.length;
 console.log(minJump(arr, n));
+
+//explanation: maxReach to check how many steps we can move forward, steps = curr_index+element, steps ended make a jump, update step = maxReach - curr_index

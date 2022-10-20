@@ -1,25 +1,20 @@
-//Minimum number of jumps gfg
-function minJump(arr, n) {
-  let maxReach = arr[0];
-  let steps = arr[0];
-  let jump = 1;
+const str = "diamondFeedAmount";
 
-  if (n === 1) return 0;
-  else if (arr[0] === 0) return -1;
-  else
-    for (let i = 1; i < n; i++) {
-      if (i === n - 1 && steps) return jump;
-      maxReach = Math.max(maxReach, i + arr[i]);
-      steps--;
-      if (steps < 0) return -1;
-      if (steps === 0) {
-        jump++;
-        if (i > maxReach) return -1;
-        steps = maxReach - i;
-      }
+const getFeedName = (str) => {
+  const string = str.split(/(?=[A-Z])/);
+
+  const newString = string.filter((item) => {
+    if (
+      item.toLowerCase() == "amount" ||
+      item.toLowerCase() == "total" ||
+      item.toLowerCase() == "count"
+    ) {
+      return false;
     }
-}
+    return true;
+  });
 
-const arr = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9];
-const n = arr.length;
-console.log(minJump(arr, n));
+  return newString.join(" ");
+};
+
+console.log(getFeedName(str));
