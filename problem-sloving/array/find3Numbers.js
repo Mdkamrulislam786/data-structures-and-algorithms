@@ -3,6 +3,7 @@
 // returns true if there is triplet
 // with sum equal to 'sum' present
 // in A[]. Also, prints the triplet
+
 function find3Numbers(A, arr_size, sum) {
   // Fix the first element as A[i]
   for (let i = 0; i < arr_size - 2; i++) {
@@ -10,10 +11,9 @@ function find3Numbers(A, arr_size, sum) {
     let curr_sum = sum - A[i];
     for (let j = i + 1; j < arr_size; j++) {
       if (s.has(curr_sum - A[j])) {
-        document.write(
-          "Triplet is " + A[i] + ", " + A[j] + ", " + (curr_sum - A[j]) + "<br>"
+        console.log(
+          "Triplet is " + A[i] + ", " + A[j] + ", " + (curr_sum - A[j]) + ""
         );
-
         return true;
       }
       s.add(A[j]);

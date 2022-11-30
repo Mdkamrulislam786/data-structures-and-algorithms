@@ -1,20 +1,12 @@
-const str = "diamondFeedAmount";
+function firstMissingPositive(arr) {
+  arr.sort((a, b) => a - b);
+  let ans = 1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == ans) ans++;
+  }
+  return ans;
+}
 
-const getFeedName = (str) => {
-  const string = str.split(/(?=[A-Z])/);
-
-  const newString = string.filter((item) => {
-    if (
-      item.toLowerCase() == "amount" ||
-      item.toLowerCase() == "total" ||
-      item.toLowerCase() == "count"
-    ) {
-      return false;
-    }
-    return true;
-  });
-
-  return newString.join(" ");
-};
-
-console.log(getFeedName(str));
+// driver code
+let arr = [1, 2, 3];
+console.log(firstMissingPositive(arr));
