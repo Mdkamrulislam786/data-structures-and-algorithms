@@ -1,4 +1,4 @@
-function smallestMissingPositive(arr, n) {
+function firstMissingPositive(arr, n) {
   // Check if 1 is present in array or not
   for (let i = 0; i < n; i++) {
     // Loop to check boundary
@@ -8,7 +8,6 @@ function smallestMissingPositive(arr, n) {
       let temp = arr[arr[i] - 1];
       arr[arr[i] - 1] = arr[i];
       arr[i] = temp;
-      console.log(i, arr);
     }
   }
 
@@ -20,7 +19,7 @@ function smallestMissingPositive(arr, n) {
 }
 
 // Driver Code
-let arr = [2, 4, 1, 3, 5];
+let arr = [1, 3, 11, 7, -4];
 let n = arr.length;
-let ans = smallestMissingPositive(arr, n);
-console.log(ans, arr);
+let ans = firstMissingPositive(arr, n);
+console.log(ans);
