@@ -120,15 +120,28 @@ processUserInput(greeting);
 
 ### Asynchronous JavaScript & EVENT LOOP
 
-Web api env the callback func are stored initially, then at agiven time these CB func are passed to callback queue or microtask queue(API call CB are passed in here), the event loop always cjhecks if the callstack is empty if its empty it first put the microtast CB's in the callstack to be executed quickly, then the callback queues CB's are passed into the callstack
+Web api env the callback func are stored initially, then at agiven time these CB func are passed to callback queue or microtask queue(API call CB are passed in here), the event loop always checks if the callstack is empty if its empty it first put the microtast CB's in the callstack to be executed quickly, then the callback queues CB's are passed into the callstack
 
 ### JS Engine
 
-Every browser has JS Runtime environment. Inside JS Runtime environment we have JS engine, Web api's(setTimeout, DOM api, fetch(), localstorage etc all these are combines into an object called window etc), event loop, callback queue, microtask queue,
+Every browser has JS Runtime environment. Inside JS Runtime environment we have JS engine, Web api's(setTimeout, DOM api, fetch(), localstorage etc all these are combines into an object called window etc), event loop, callback queue, microtask queue.
 
 JS Engine is not a machine, its made with C++.JS Engine executes a code in the machine in 4 phases,
 
 1. Code
 2. Parsing - breaks the code into AST Abstract syntax tree (astexplorer.net to checkout the AST of a js code)
-3. Compilation - Just In Time compilation, has interpreter which runs the code fat, the compiler that optimized the code, in modern js engine both interpreter and compiler works together, interpreter runs the code line by line fast at the same time compiler optimzes the interpreted code to be excuted as optimized machine code
+3. Compilation - Just In Time compilation, has interpreter which runs the code fast, the compiler that optimized the code, in modern js engine both interpreter and compiler works together, interpreter runs the code line by line fast at the same time compiler optimzes the interpreted code to be excuted as optimized machine code
 4. Execution - has memory heap and callstack, memory heap work along with Garbage collector and callstack together, the GC allocates, reallocates, free up the memory, it uses mark & sweap alogorithm to do that
+
+### Callback Hell
+
+Good part is callback can excute later like inside of settimeout. CB are why asynchronus js exits.
+Bad part is
+
+1. Callback hell- callback iside callback and inside cb and cb
+2. Inversion of control - You pass your pice of code(cb) to another function tobe excuted, you dont know if the main function will excute it without error, what if ur cb dosent get called at all
+
+### Promises
+
+Is an object that represents a completeion of an async operation. Gives undefined first after async task is completed fills undefined with data.
+it solves inversion of control bcz you handle if promise faced an error , cb passed executes only once. promise chain .then().then() .catch() gets called after a .then() chain after .catch() if ther are more .then() gets called
