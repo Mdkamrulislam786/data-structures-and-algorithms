@@ -72,5 +72,3 @@ ts.push2(7);
 console.log("Popped element from" + " stack1 is " + ts.pop1());
 ts.push2(40);
 console.log("<br/>Popped element from" + " stack2 is " + ts.pop2());
-
-// This code contributed by Rajput-Ji
