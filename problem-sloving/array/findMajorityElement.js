@@ -1,5 +1,5 @@
 // Javascript Program for finding out majority element in an array
-
+//Moore’s Voting Algorithm:
 /* Function to print Majority Element */
 function printMajority(a, size) {
   /* Find the candidate for Majority*/
