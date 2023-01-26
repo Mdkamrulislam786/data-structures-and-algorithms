@@ -1,3 +1,28 @@
+// Program to Find the repeating
+// and missing elements
+
+function printTwoElements(arr, size) {
+  var i;
+  console.log("The repeating element is ");
+
+  for (i = 0; i < size; i++) {
+    var abs_value = Math.abs(arr[i]);
+    if (arr[abs_value - 1] > 0) arr[abs_value - 1] = -arr[abs_value - 1];
+    else console.log(abs_value);
+  }
+
+  console.log("<br> and the missing element is ");
+  for (i = 0; i < size; i++) {
+    if (arr[i] > 0) console.log(i + 1);
+  }
+}
+
+/* Driver code */
+arr = new Array(7, 3, 4, 5, 5, 6, 2);
+n = arr.length;
+printTwoElements(arr, n);
+
+//Solution 2
 // Javascript program to find the missing
 // and repeating element
 function swap(arr, a, b) {

@@ -30,7 +30,7 @@ function maxPathSum(ar1, ar2, m, n) {
       // Take the maximum of two sums and add to
       // result
       //Also add the common element of array, once
-      result += Math.max(sum1, sum2) + ar1[i];
+      result += max(sum1, sum2) + ar1[i];
 
       // Update sum1 and sum2 for elements after this
       // intersection point
@@ -51,7 +51,7 @@ function maxPathSum(ar1, ar2, m, n) {
 
   // Add maximum of two sums of
   // remaining elements
-  result += Math.max(sum1, sum2);
+  result += max(sum1, sum2);
 
   return result;
 }
