@@ -39,7 +39,7 @@ First 3 are elemantary sorting algorithms and secod 2 are more advanced
 4. Merge sort: Best time comexity always O(n log n), space complexity O(n). Best if you dontcare about space complexity. Fast
 5. Quick sort: Worsttime com O(n^2) , avargae,best O(n log n) and space omplexity O(n log n)
 
-In real life we use mostly merge and quick sort. Most of our sorting algorithm has O(n log n) time complexity and mathemtically it is impossibe tohave better time complexity.
+In real life we use mostly merge and quick sort. Most of our sorting algorithm has O(n log n) time complexity and mathemtically it is impossibe to have better time complexity.
 THese 5 are in the category of comparision sort.
 Noncomparision sort are where you almost dont compare things, the inputs are really small. They are the only ones that has better time complexity than O(n log n).
 Among Noncomparision sort 2 are :
