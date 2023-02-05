@@ -70,7 +70,7 @@ insertionSort(numbers3);
 const numbers4 = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function mergeSort(array) {
-  if (array.length === 1) {
+  if (array.length == 1) {
     return array;
   }
   // Split Array in into right and left
@@ -85,8 +85,14 @@ function merge(left, right) {
   const result = [];
   let leftIndex = 0;
   let rightIndex = 0;
-  while (leftIndex < left.length && rightIndex < right.length) {
-    if (left[leftIndex] < right[rightIndex]) {
+  while (leftIndex < left.length || rightIndex < right.length) {
+    if (leftIndex === left.length) {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    } else if (rightIndex === right.length) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else if (left[leftIndex] < right[rightIndex]) {
       result.push(left[leftIndex]);
       leftIndex++;
     } else {
@@ -94,11 +100,11 @@ function merge(left, right) {
       rightIndex++;
     }
   }
-  // console.log(left, right)
-  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+  return result;
 }
-
 const answer = mergeSort(numbers4);
+
+console.log(answer);
 
 //QUICK SORT
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
@@ -110,11 +116,11 @@ function quickSort(array, left, right) {
   if (left < right) {
     pivot = right;
     partitionIndex = partition(array, pivot, left, right);
-
     //sort left and right
     quickSort(array, left, partitionIndex - 1);
     quickSort(array, partitionIndex + 1, right);
   }
+
   return array;
 }
 
@@ -128,7 +134,9 @@ function partition(array, pivot, left, right) {
       partitionIndex++;
     }
   }
+
   swap(array, right, partitionIndex);
+
   return partitionIndex;
 }
 

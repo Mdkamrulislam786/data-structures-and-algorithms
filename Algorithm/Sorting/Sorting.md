@@ -37,7 +37,7 @@ First 3 are elemantary sorting algorithms and secod 2 are more advanced
 2. Buble sort: almost never gonna use t
 3. Selection: almost never use it
 4. Merge sort: Best time comexity always O(n log n), space complexity O(n). Best if you dontcare about space complexity. Fast
-5. Quick sort: Worsttime com O(n^2) , avargae,best O(n log n) and space omplexity O(n log n)
+5. Quick sort: Worsttime com O(n^2) , avargae,best O(n log n) and space complexity O(n log n)
 
 In real life we use mostly merge and quick sort. Most of our sorting algorithm has O(n log n) time complexity and mathemtically it is impossibe to have better time complexity.
 THese 5 are in the category of comparision sort.

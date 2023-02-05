@@ -1,21 +1,35 @@
-// javascript program for the above approach
-function maxProfit(prices, size) {
-  // maxProfit adds up the difference between
-  // adjacent elements if they are in increasing order
-  var maxProfit = 0;
+const mergeSort = (arr) => {
+  if (arr.length < 2) return arr;
+  const length = arr.length;
+  const middle = Math.floor(length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+  return merge(mergeSort(left), mergeSort(right));
+};
 
-  // The loop starts from 1
-  // as its comparing with the previous
-  for (i = 1; i < size; i++)
-    if (prices[i] > prices[i - 1]) maxProfit += prices[i] - prices[i - 1];
-  return maxProfit;
-}
+const merge = (leftArray, rightArray) => {
+  const result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
 
-// Driver code
+  while (leftIndex < leftArray.length || rightIndex < rightArray.length) {
+    if (leftIndex === leftArray.length) {
+      result.push(rightArray[rightIndex]);
+      rightIndex++;
+    } else if (rightIndex === rightArray.length) {
+      result.push(leftArray[leftIndex]);
+      leftIndex++;
+    } else if (leftArray[leftIndex] < rightArray[rightIndex]) {
+      result.push(leftArray[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(rightArray[rightIndex]);
+      rightIndex++;
+    }
+  }
+  return result;
+};
 
-// stock prices on consecutive days
-var price = [4, 2, 2, 2, 4];
-var n = price.length;
+const numbers4 = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-// function call
-console.log(maxProfit(price, n));
+console.log(mergeSort(numbers4));
