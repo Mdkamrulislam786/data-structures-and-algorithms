@@ -1,25 +1,21 @@
+// A JavaScript program to put all negative
+// numbers before positive numbers
+
 function rearrange(arr, n) {
-  const rearrangedArray = [];
-  const positiveNumbers = [];
-  const negativeNumbers = [];
-
+  let j = 0;
   for (let i = 0; i < n; i++) {
-    const element = arr[i];
-    if (element >= 0) positiveNumbers.push(element);
-    else negativeNumbers.push(element);
+    if (arr[i] < 0) {
+      if (i != j) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+      j++;
+    }
   }
-
-  for (let j = 0; j < n; j++) {
-    const positiveNum = positiveNumbers[j];
-    const negativeNum = negativeNumbers[j];
-
-    if (positiveNum >= 0) rearrangedArray.push(positiveNum);
-    if (negativeNum) rearrangedArray.push(negativeNum);
-  }
-
-  return rearrangedArray;
 }
 
-const arr = [9, 4, -2, -1, 5, 0, -5, -3, 2];
-const n = arr.length;
-console.log(rearrange(arr, n));
+// Driver code
+let arr = [-1, 2, -3, 4, 5, 6, -7, 8, 9];
+let n = arr.length;
+rearrange(arr, n);
