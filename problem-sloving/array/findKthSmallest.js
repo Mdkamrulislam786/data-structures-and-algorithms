@@ -1,4 +1,5 @@
 function findKthSmallest(arr, k) {
+  //use sorting algorithms
   arr.sort((a, b) => a - b);
   console.log("Kth smallest", arr[k - 1]);
   return arr[k - 1];
