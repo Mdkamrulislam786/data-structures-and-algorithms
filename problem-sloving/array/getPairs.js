@@ -1,12 +1,10 @@
 function getPairs(arr, n, k) {
-  let obj = {};
+  const obj = {};
   let count = 0;
+
   for (let i = 0; i < n; i++) {
-    if (!Object.keys(obj).includes(arr[i])) obj[arr[i]] = i;
-    if (Object.keys(obj).includes(`${k - arr[i]}`)) {
-      count++;
-    }
-    console.log(obj);
+    if (obj[k - arr[i]]) count += 1;
+    else obj[arr[i]] = 1;
   }
   return count;
 }
