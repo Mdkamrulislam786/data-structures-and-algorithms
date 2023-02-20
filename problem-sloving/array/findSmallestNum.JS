@@ -30,3 +30,18 @@ console.log(findSmallest(arr3, n3) + "<br/>");
 var arr4 = [1, 1, 3, 4];
 var n4 = arr4.length;
 console.log(findSmallest(arr4, n4) + "<br/>");
+
+function findSmallest(arr, n) {
+  // Traverse the array and increment 'res' if arr[i] is
+  // smaller than or equal to 'res'.
+  if (arr[0] !== 0) return 0;
+  for (i = 0; i < n - 1; i++) {
+    if (arr[i + 1] - arr[i] > 1) return arr[i] + 1;
+  }
+}
+
+// Driver program to test above functions
+
+var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 10];
+var n1 = arr1.length;
+console.log(findSmallest(arr1, n1));
