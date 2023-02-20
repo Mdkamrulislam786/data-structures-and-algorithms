@@ -3,10 +3,8 @@
 
 function max(a, b) {
   if (a == b) return a;
-  else {
-    if (a > b) return a;
-    else return b;
-  }
+  else if (a > b) return a;
+  else return b;
 }
 
 // Returns minimum number of platforms required
@@ -25,7 +23,7 @@ function findPlatform(arr, dep, n) {
 
     for (var j = 0; j < n; j++) {
       // check for overlap
-      if (i != j) if (arr[i] >= arr[j] && dep[j] >= arr[i]) plat_needed++;
+      if (i != j && arr[i] >= arr[j] && dep[j] >= arr[i]) plat_needed++;
     }
 
     // update result
@@ -41,6 +39,12 @@ var n = 3;
 console.log(
   "Minimum Number of Platforms Required = " + findPlatform(arr, dep, n)
 );
+
+/* Explanation:
+arr[i] >= arr[j] means if any train has arrived afterwards
+dep[j] >= arr[i] means if there are any train that didnt departed before arr[i]
+if both cond are true means we need one more platform
+*/
 
 //SOL 2
 function findPlatform2(arr, dep, n) {
