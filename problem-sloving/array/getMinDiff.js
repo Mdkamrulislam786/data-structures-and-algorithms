@@ -9,11 +9,12 @@ function getMinDiff(arr, n, k) {
 
   for (let i = 1; i < n; i++) {
     tempmin = Math.min(arr[0] + k, arr[i] - k); // Minimum element when we
-    // add k to whole array
+    // subtract k to whole array, min elem + rest -,
     tempmax = Math.max(arr[i - 1] + k, arr[n - 1] - k); // Maximum element when we
-    // subtract k from whole array
+    // add k from whole array, high - rest +
     ans = Math.min(ans, tempmax - tempmin);
   }
+
   return ans;
 }
 
